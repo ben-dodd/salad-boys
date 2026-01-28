@@ -1,0 +1,82 @@
+<h1>Guitar &amp; Bass Tabs</h1>
+
+<p>Learn to play your favorite Salad Boys songs! All tabs are in standard tuning unless noted.</p>
+
+<h2>Metalmania</h2>
+<ul>
+  <li><a href="#" onclick="showTab('psuedo'); return false;">Psuedo</a> (Guitar)</li>
+  <li><a href="#" onclick="showTab('dreamdate'); return false;">Dream Date</a> (Guitar + Bass)</li>
+  <li><a href="#">Silver Bullet</a> (Coming Soon)</li>
+</ul>
+
+<h2>This Is Glue</h2>
+<ul>
+  <li><a href="#">That's What You Get</a> (Coming Soon)</li>
+  <li><a href="#">This Is Glue</a> (Coming Soon)</li>
+</ul>
+
+<h2>Around the Dial</h2>
+<ul>
+  <li><a href="#">Around the Dial</a> (Coming Soon)</li>
+</ul>
+
+<hr>
+
+<div id="tab-display">
+  <h3>Select a song above to view the tab!</h3>
+</div>
+
+<hr>
+
+<p><strong>Note:</strong> These tabs are created by fans and may not be 100% accurate. If you have corrections or want to submit your own tabs, email us at <a href="mailto:saladboys@gmail.com">saladboys@gmail.com</a></p>
+
+<script>
+function showTab(song) {
+  const tabDisplay = document.getElementById('tab-display');
+  
+  const tabs = {
+    'psuedo': `
+      <h3>Psuedo - Guitar Tab</h3>
+      <div class="tab-content">
+Intro/Verse Riff:
+e|-------------------------|
+B|-------------------------|
+G|-------5-5-5-5-5-5-5-5---|
+D|-------5-5-5-5-5-5-5-5---|
+A|--3-3--3-3-3-3-3-3-3-3---|
+E|--3-3--------------------|
+
+Chorus:
+e|-------------------------|
+B|-------------------------|
+G|--5--5--7--7--5--5--4----|
+D|--5--5--7--7--5--5--4----|
+A|--3--3--5--5--3--3--2----|
+E|-------------------------|
+      </div>
+    `,
+    'dreamdate': `
+      <h3>Dream Date - Guitar Tab</h3>
+      <div class="tab-content">
+Main Riff:
+e|--------------------------------|
+B|--------------------------------|
+G|--------------------------------|
+D|--5-5-5-5--7-7-7-7--9-9-9-9-----|
+A|--5-5-5-5--7-7-7-7--9-9-9-9-----|
+E|--3-3-3-3--5-5-5-5--7-7-7-7-----|
+
+Bass Line:
+G|--------------------------------|
+D|--------------------------------|
+A|--5-----7-----9-----------------|
+E|--3-----5-----7-----------------|
+      </div>
+    `
+  };
+  
+  if (tabs[song]) {
+    tabDisplay.innerHTML = tabs[song];
+  }
+}
+</script>

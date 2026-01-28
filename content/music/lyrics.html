@@ -1,0 +1,115 @@
+<h1>Lyrics</h1>
+
+<p>Select an album to view lyrics:</p>
+
+<h2>Metalmania (2014)</h2>
+<ul>
+  <li><a href="#" onclick="showLyrics('psuedo'); return false;">Psuedo</a></li>
+  <li><a href="#" onclick="showLyrics('dreamdate'); return false;">Dream Date</a></li>
+  <li><a href="#">Silver Bullet</a></li>
+  <li><a href="#">World Wide Web</a></li>
+  <li><a href="#">Closing Time</a></li>
+</ul>
+
+<h2>This Is Glue (2016)</h2>
+<ul>
+  <li><a href="#">That's What You Get</a></li>
+  <li><a href="#">This Is Glue</a></li>
+  <li><a href="#">Everybody's Falling</a></li>
+  <li><a href="#">Not Good</a></li>
+  <li><a href="#">Feel the Burn</a></li>
+</ul>
+
+<h2>Around the Dial (2019)</h2>
+<ul>
+  <li><a href="#">Around the Dial</a></li>
+  <li><a href="#">Murder She Wrote</a></li>
+  <li><a href="#">Night Moves</a></li>
+  <li><a href="#">Static</a></li>
+  <li><a href="#">Fade Out</a></li>
+</ul>
+
+<hr>
+
+<div id="lyrics-display">
+  <h3>Select a song above to view lyrics!</h3>
+</div>
+
+<script>
+function showLyrics(song) {
+  const lyricsDisplay = document.getElementById('lyrics-display');
+  
+  const lyrics = {
+    'psuedo': `
+      <h3>Psuedo</h3>
+      <p><em>From the album "Metalmania" (2014)</em></p>
+      <div class="tab-content" style="white-space: pre-line; font-family: 'Times New Roman', serif;">
+Verse 1:
+Walking down the street today
+Everything seems far away
+The lights are dim, the sound is low
+I don't know which way to go
+
+Chorus:
+Psuedo, psuedo
+Nothing's ever what it seems
+Psuedo, psuedo
+Living in between the dreams
+
+Verse 2:
+The world keeps spinning round and round
+My feet can't seem to touch the ground
+I reach out but there's nothing there
+Just empty space and vacant stare
+
+(Chorus)
+
+Bridge:
+Is this real or is this fake?
+How much more can I take?
+The lines are blurred, the truth is bent
+I don't know what any of it meant
+
+(Chorus x2)
+      </div>
+    `,
+    'dreamdate': `
+      <h3>Dream Date</h3>
+      <p><em>From the album "Metalmania" (2014)</em></p>
+      <div class="tab-content" style="white-space: pre-line; font-family: 'Times New Roman', serif;">
+Verse 1:
+Met you in a dream last night
+Everything was feeling right
+We walked along the moonlit shore
+I never felt this way before
+
+Chorus:
+Dream date, can't escape
+This feeling that I have for you
+Dream date, wide awake
+Wondering if you feel it too
+
+Verse 2:
+Woke up and you disappeared
+Just like I always feared
+The sun came up, reality
+Took you away from me
+
+(Chorus)
+
+Bridge:
+Close my eyes and try again
+Maybe I'll see you then
+In that world where we can be
+Together for eternity
+
+(Chorus x2)
+      </div>
+    `
+  };
+  
+  if (lyrics[song]) {
+    lyricsDisplay.innerHTML = lyrics[song];
+  }
+}
+</script>

@@ -1,0 +1,434 @@
+/* Salad Boys Website CSS - Matching Original Style */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../resources/images/background.gif');
+  background-color: #bbebd1;
+  background-repeat: repeat;
+}
+
+/* Main page container */
+.page-container {
+  width: 900px;
+  max-width: 95%;
+  padding: 2px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+
+
+/* Header row - logo and banner */
+.header-logo {
+  text-align: center;
+}
+
+.header-logo img {
+  height: 82px;
+  width: 124px;
+}
+
+.header-banner img {
+  height: 101px;
+  width: 500px;
+}
+
+/* Navigation menu */
+.nav-menu {
+  padding-left: 18px;
+  text-align: left;
+  font-family: 'Georgia, Times, Times New Roman, serif';
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.menu-section {
+  margin-bottom: 8px;
+}
+
+.menu-header {
+  color: #000000;
+  font-size: 16px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.menu-item {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.menu-item a {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+.menu-item a:visited {
+  color: #800080;
+}
+
+.menu-item a:hover {
+  color: #ff0000;
+}
+
+.new-badge {
+  background-color: #ff0000;
+  color: #ffff00;
+  font-size: 10px;
+  padding: 1px 3px;
+}
+
+/* Content area */
+.content-area {
+  background-color: #bbebd1;
+  padding: 8px;
+}
+
+.content-area h1 {
+  font-family: 'Georgia, Times, Times New Roman, serif';
+  font-size: 20px;
+  font-weight: 100;
+  color: #000000;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #000000;
+  text-align: center;
+}
+
+.content-area h2 {
+  font-family: 'Georgia, Times, Times New Roman, serif';
+  font-size: 16px;
+  color: #000080;
+  margin: 12px 0 8px 0;
+}
+
+.content-area h3 {
+  font-family: 'Georgia, Times, Times New Roman, serif';
+  font-size: 14px;
+  color: #008000;
+  margin: 8px 0 5px 0;
+}
+
+.content-area p {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.content-area a {
+  color: #0000ff;
+}
+
+.content-area a:visited {
+  color: #800080;
+}
+
+.content-area hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.content-area img {
+  margin: 4px;
+}
+
+/* Footer */
+.footer {
+  grid-column: 1 / span 2;
+  text-align: center;
+  font-size: 12px;
+  color: #000080;
+  padding-top: 12px;
+}
+
+.footer a {
+  color: #0000ff;
+  padding-bottom: 12px;
+}
+
+/* News items */
+.news-item {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #808080;
+}
+
+.news-date {
+  font-weight: bold;
+  color: #800000;
+  font-size: 12px;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+}
+
+th, td {
+  border: 1px solid #808080;
+  padding: 4px 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #c0c0c0;
+}
+
+/* Albums/Discography */
+.album {
+  margin-bottom: 15px;
+  padding: 8px;
+  background-color: #e8f5e9;
+}
+
+.album img {
+  float: left;
+  margin-right: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+.album-title {
+  font-weight: bold;
+  color: #800000;
+}
+
+.album-year {
+  font-style: italic;
+  color: #606060;
+  font-size: 12px;
+}
+
+/* Photo gallery */
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.photo-gallery img {
+  width: 120px;
+  height: auto;
+  border: 1px solid #000000;
+}
+
+/* Tabs display */
+.tab-content {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ffffcc;
+  border: 1px solid #000000;
+  padding: 8px;
+  white-space: pre;
+  overflow-x: auto;
+  font-size: 12px;
+}
+
+/* FAQ */
+.faq-item {
+  margin-bottom: 12px;
+}
+
+.faq-question {
+  font-weight: bold;
+  color: #000080;
+}
+
+.faq-answer {
+  margin-left: 15px;
+}
+
+/* Links */
+.link-item {
+  margin-bottom: 8px;
+}
+
+.link-description {
+  font-size: 12px;
+  color: #404040;
+  margin-left: 10px;
+}
+
+/* Equipment */
+.equipment-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.equipment-item img {
+  width: 60px;
+  height: 60px;
+}
+
+.equipment-info h4 {
+  margin: 0 0 4px 0;
+  color: #800000;
+  font-size: 14px;
+}
+
+/* Under construction */
+.under-construction {
+  text-align: center;
+  padding: 15px;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 30px;
+  color: #808080;
+}
+
+/* Audio player mock */
+.audio-player {
+  background-color: #000000;
+  color: #00ff00;
+  padding: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+}
+
+/* Reviews */
+.album-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.review-artwork img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.review-list {
+  flex: 1;
+}
+
+.review-item {
+  margin-bottom: 0.5rem;
+}
+
+.review-item a {
+  color: #000080;
+  text-decoration: none;
+}
+
+.review-item a:hover {
+  text-decoration: underline;
+}
+
+.review-artwork-single {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+
+.review-body {
+  line-height: 1.5;
+}
+
+.stars {
+  color: #000080;
+  font-family: monospace;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+/* Single Review Block */
+.single-review {
+  background-color: #fff2e0; /* light orange */
+  padding: 16px;
+  margin-bottom: 2rem;
+  border: 1px solid #e0c090; /* optional border for clarity */
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+.single-review .review-content {
+  min-height: 60vh;
+}
+
+.single-review .review-header {
+  font-size: 18px;
+  font-weight: normal; /* not bold */
+  margin-bottom: 6px;
+  color: #000080;
+}
+
+.single-review .review-meta {
+  font-size: 12px;
+  color: #606060;
+  margin-bottom: 6px;
+}
+
+.single-review .review-author,
+.single-review .review-rating {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #404040;
+}
+
+.single-review .review-body {
+  font-size: 16px;
+  margin-top: 8px;
+  white-space: pre-wrap; /* preserve line breaks */
+}
+
+/* Mobile Support */
+
+@media (max-width: 700px) {
+  .page-container {
+    display: block;     /* stack nav on top of content */
+    width: 100%;
+    padding: 5px;
+  }
+
+  .nav-menu {
+    padding-left: 5px;
+    font-size: 18px;
+  }
+
+  .nav-menu .menu-header {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+  }
+
+  .nav-menu .menu-item {
+    padding-left: 8px;
+    margin-bottom: 4px;
+    font-size: 16px;
+  }
+
+  .menu-item a {
+    font-size: 16px;
+  }
+
+  .header-banner img,
+  .header-logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .review-artwork img {
+    width: 80px;   /* shrink album artwork for mobile */
+    height: 80px;
+  }
+
+  .review-list {
+    margin-left: 0;
+  }
+}

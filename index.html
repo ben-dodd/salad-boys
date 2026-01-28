@@ -1,72 +1,103 @@
-
+<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Salad Boys Office Web Site</title>
+    <title>Salad Boys Official Web Site</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body style="background-image: url('resources/background.gif'); background-color: #bbebd1">
-    <div style="width: 700px; padding: 2; display: grid; grid-template-columns: 200px 500px">
-      <div style="text-align: center">
-        <a href="http://www.sover.net/~gregboyd/john4.wav">
-          <img src="resources/topleft.jpg" height="82" width="124">
+  <body>
+    <div class="page-container">
+      <!-- Header Row -->
+      <div class="header-logo">
+        <a href="#" onclick="loadPage('main/news'); return false;">
+          <img src="resources/images/topleft.jpg" alt="Salad Boys">
         </a>
       </div>
-      <div>
-        <img src="resources/banner.jpg" height="101" width="500" align="right">
+      <div class="header-banner">
+        <img src="resources/images/banner.jpg" alt="Salad Boys Official Web Site" align="right">
       </div>
 
-      <div style="text-align: center; font-family: Lucida Sans; font-weight: bold; font-color: red; font-size: 18">
-        <div>
-          Main Page
+      <!-- Navigation Menu -->
+      <div class="nav-menu">
+        <div class="menu-section">
+          <div class="menu-header">Main</div>
+          <div class="menu-item"><a href="#" onclick="loadPage('main/news'); return false;">News</a></div>
+          <div class="menu-item"><a href="#" onclick="loadPage('main/live'); return false;">Live</a></div>
         </div>
-        <div>
-          <a href="bio.html">
-            Biography
-          </a>
+
+        <div class="menu-section">
+          <div class="menu-header">The Band</div>
+          <div class="menu-item"><a href="#" onclick="loadPage('band/biography'); return false;">Biography</a></div>
+          <div class="menu-item"><a href="#" onclick="loadPage('band/discography'); return false;">Discography</a></div>
         </div>
-        <div>
-          <a href="disco.html">
-            Discography
-          </a>
+
+        <div class="menu-section">
+          <div class="menu-header">Media</div>
+          <div class="menu-item"><a href="#" onclick="loadPage('media/photos'); return false;">Photos</a></div>
+          <div class="menu-item"><a href="#" onclick="loadPage('media/audio-video'); return false;">Audio and Video</a></div>
         </div>
-        <div>
-          <a href="tour.html">
-            Tour Dates
-          </a>
+
+        <div class="menu-section">
+          <div class="menu-header">Press</div>
+          <div class="menu-item"><a href="#" onclick="loadPage('press/reviews'); return false;">Reviews</a></div>
+          <div class="menu-item"><a href="#" onclick="loadPage('press/interviews'); return false;">Interviews</a></div>
         </div>
-        <div>
-          <a href="pics.html">
-            Pictures
-          </a>
+
+        <div class="menu-section">
+          <div class="menu-header">Music</div>
+          <div class="menu-item"><a href="#" onclick="loadPage('music/tabs'); return false;">Guitar and Bass Tabs</a></div>
+          <div class="menu-item"><a href="#" onclick="loadPage('music/lyrics'); return false;">Lyrics</a></div>
+          <div class="menu-item"><a href="#" onclick="loadPage('music/equipment'); return false;">Equipment Guide <span class="new-badge">NEW!</span></a></div>
         </div>
-        <div>
-          <a href="history.html">
-            History
-          </a>
-        </div>
-        <div>
-          <a href="faq.html">
-            F.A.Q.
-          </a>
-        </div>
-        <div>
-          <a href="tabs.html">
-            Guitar and Bass Tabs
-          </a>
-        </div>
-        <div style="background-color: #ffe4e1; margin-top: 50px; padding: 5px; font-size: 14">
-          Greetings, and welcome to the Official Salad Boys website!
+
+        <div class="menu-section">
+          <div class="menu-header">Misc</div>
+          <div class="menu-item"><a href="#" onclick="loadPage('misc/faq'); return false;">F.A.Q.</a></div>
+          <div class="menu-item"><a href="#" onclick="loadPage('misc/rants'); return false;">Rants/Musings</a></div>
+          <div class="menu-item"><a href="#" onclick="loadPage('misc/links'); return false;">Links</a></div>
         </div>
       </div>
-      <div>
-        <div>
-          <img src="resources/band.jpg" height="350" width="300">
-        </div>
+
+      <!-- Content Area -->
+      <div class="content-area" id="content-area">
+        <div class="loading">Loading...</div>
       </div>
-      <div style="grid-column: 1 / span 2; text-align: center; font-size: 12; font-color: blue; padding-top: 12; col-span: 2">
-        <div><a href="mailto:saladboys@gmail.com" style="padding-bottom: 12">saladboys@gmail.com</a></div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div><a href="mailto:saladboys@gmail.com">saladboys@gmail.com</a></div>
         <div>© 2026</div>
       </div>
     </div>
+
+    <script src="js/reviewParser.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/loadReviews.js"></script>
+    <script src="js/loadSingleReview.js"></script>
+    <script>
+      // Detect if hash is a single review
+      function checkForSingleReview() {
+        const hash = window.location.hash.slice(1); // remove #
+        if (!hash.startsWith('press/review')) return;
+
+        const params = new URLSearchParams(hash.split('?')[1]);
+        const file = params.get('file');
+        if (!file) return;
+
+        // Load the review into the content-area
+        loadSingleReview(file, 'content-area');
+      }
+
+      // Run on page load
+      document.addEventListener('DOMContentLoaded', checkForSingleReview);
+
+      // Run on hash change (clicking another review)
+      window.addEventListener('hashchange', checkForSingleReview);
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        loadPage('main/news');
+      });
+    </script>
   </body>
 </html>
